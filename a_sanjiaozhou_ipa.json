@@ -1,0 +1,302 @@
+{
+    "keyMapNodes": [
+        {
+            "centerPos": {
+                "x": 0.171,
+                "y": 0.786
+            },
+            "downKey": "Key_S",
+            "downOffset": 0.2,
+            "leftKey": "Key_A",
+            "leftOffset": 0.1,
+            "rightKey": "Key_D",
+            "rightOffset": 0.1,
+            "type": "KMT_STEER_WHEEL",
+            "upKey": "Key_W",
+            "upOffset": 0.27
+        },
+        {
+            "key": "Key_Escape",
+            "pos": {
+                "x": 0.967,
+                "y": 0.05
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_Space",
+            "pos": {
+                "x": 0.963,
+                "y": 0.747
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_Tab",
+            "pos": {
+                "x": 0.036,
+                "y": 0.914
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "switchMapPos": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_Z",
+            "pos": {
+                "x": 0.939,
+                "y": 0.91
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_X",
+            "pos": {
+                "x": 0.962,
+                "y": 0.381
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_C",
+            "pos": {
+                "x": 0.842,
+                "y": 0.939
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_R",
+            "pos": {
+                "x": 0.748,
+                "y": 0.843
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_G",
+            "pos": {
+                "x": 0.69,
+                "y": 0.923
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_F",
+            "pos": {
+                "x": 0.663,
+                "y": 0.371
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "LeftButton",
+            "pos": {
+                "x": 0.851,
+                "y": 0.78
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_V",
+            "pos": {
+                "x": 0.869,
+                "y": 0.377
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "RightButton",
+            "pos": {
+                "x": 0.962,
+                "y": 0.531
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_Q",
+            "pos": {
+                "x": 0.114,
+                "y": 0.444
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_E",
+            "pos": {
+                "x": 0.236,
+                "y": 0.453
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_1",
+            "pos": {
+                "x": 0.426,
+                "y": 0.937
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_2",
+            "pos": {
+                "x": 0.525,
+                "y": 0.929
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_3",
+            "pos": {
+                "x": 0.612,
+                "y": 0.929
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_T",
+            "pos": {
+                "x": 0.599,
+                "y": 0.764
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_N",
+            "pos": {
+                "x": 0.291,
+                "y": 0.175
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_5",
+            "pos": {
+                "x": 0.295,
+                "y": 0.913
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_B",
+            "pos": {
+                "x": 0.566,
+                "y": 0.868
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_M",
+            "pos": {
+                "x": 0.124,
+                "y": 0.198
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_Y",
+            "pos": {
+                "x": 0.730,
+                "y": 0.387
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "MiddleButton",
+            "macroCodeContent": "",
+            "pos": {
+                "x": 0.796,
+                "y": 0.375
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_Control",
+            "macroCodeContent": "",
+            "pos": {
+                "x": 0.97,
+                "y": 0.190
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        },
+        {
+            "key": "Key_H",
+            "macroCodeContent": "",
+            "pos": {
+                "x": 0.697,
+                "y": 0.220
+            },
+            "resetMove": false,
+            "switchMap": false,
+            "type": "KMT_CLICK"
+        }
+    ],
+    "mouseMoveMap": {
+        "speedRatioX": 20.55,
+        "speedRatioY": 20.55,
+        "speedRatio": 5,
+
+        "startPos": {
+            "x": 0.738,
+            "y": 0.105
+        },
+        "timedResetView": true
+    },
+    "switchKey": "Key_QuoteLeft",
+    "switchKeyPos": {
+        "x": 0.5,
+        "y": 0.501
+    }
+}
