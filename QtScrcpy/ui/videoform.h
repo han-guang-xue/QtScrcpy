@@ -58,6 +58,8 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
 
+    void focusOutEvent(QFocusEvent *event) override;
+
     void paintEvent(QPaintEvent *) override;
     void showEvent(QShowEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;

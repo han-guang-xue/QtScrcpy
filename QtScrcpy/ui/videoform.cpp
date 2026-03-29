@@ -724,6 +724,7 @@ void VideoForm::keyPressEvent(QKeyEvent *event)
 {
     auto device = qsc::IDeviceManage::getInstance().getDevice(m_serial);
     if (!device) {
+        event->ignore();
         return;
     }
     if (Qt::Key_Escape == event->key() && !event->isAutoRepeat() && isFullScreen()) {
@@ -731,15 +732,45 @@ void VideoForm::keyPressEvent(QKeyEvent *event)
     }
 
     emit device->keyEvent(event, m_videoWidget->frameSize(), m_videoWidget->size());
+    event->accept();
 }
 
 void VideoForm::keyReleaseEvent(QKeyEvent *event)
 {
     auto device = qsc::IDeviceManage::getInstance().getDevice(m_serial);
     if (!device) {
+        event->ignore();
         return;
     }
     emit device->keyEvent(event, m_videoWidget->frameSize(), m_videoWidget->size());
+    event->accept();
+}
+
+void VideoForm::focusOutEvent(QFocusEvent *event)
+{
+    Q_UNUSED(event)
+    // When window loses focus, release all pressed keys to avoid stuck keys
+    auto device = qsc::IDeviceManage::getInstance().getDevice(m_serial);
+    if (!device) {
+        return;
+    }
+    // Send key release events for all possible keys
+    // This is a workaround for the issue where key release events are not received
+    // when the window loses focus while keys are being held
+    Qt::Key keys[] = {
+        Qt::Key_A, Qt::Key_B, Qt::Key_C, Qt::Key_D, Qt::Key_E, Qt::Key_F,
+        Qt::Key_G, Qt::Key_H, Qt::Key_I, Qt::Key_J, Qt::Key_K, Qt::Key_L,
+        Qt::Key_M, Qt::Key_N, Qt::Key_O, Qt::Key_P, Qt::Key_Q, Qt::Key_R,
+        Qt::Key_S, Qt::Key_T, Qt::Key_U, Qt::Key_V, Qt::Key_W, Qt::Key_X,
+        Qt::Key_Y, Qt::Key_Z,
+        Qt::Key_Up, Qt::Key_Down, Qt::Key_Left, Qt::Key_Right,
+        Qt::Key_Space, Qt::Key_Return, Qt::Key_Enter, Qt::Key_Tab,
+        Qt::Key_Shift, Qt::Key_Control, Qt::Key_Alt, Qt::Key_Meta
+    };
+    for (Qt::Key key : keys) {
+        QKeyEvent releaseEvent(QEvent::KeyRelease, key, Qt::NoModifier);
+        emit device->keyEvent(&releaseEvent, m_videoWidget->frameSize(), m_videoWidget->size());
+    }
 }
 
 void VideoForm::paintEvent(QPaintEvent *paint)
