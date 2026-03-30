@@ -325,6 +325,13 @@ void InputConvertGame::processSteerWheel(const KeyMap::KeyMapNode &node, const Q
 {
     int key = from->key();
     bool flag = from->type() == QEvent::KeyPress;
+    
+    // Fix: Ignore auto-repeat key events for steer wheel
+    // Auto-repeat causes the key to "jitter" because it repeatedly triggers the timer reset
+    if (from->isAutoRepeat()) {
+        return;
+    }
+    
     // identify keys - only process if key is actually one of the steer wheel keys
     bool isSteerWheelKey = false;
     if (key == node.data.steerWheel.up.key) {
