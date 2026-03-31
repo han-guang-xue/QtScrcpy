@@ -470,6 +470,12 @@ void InputConvertGame::processKeyClick(const QPointF &clickPos, bool clickTwice,
         hideMouseCursor(!m_needBackMouseMove);
     }
 
+    // Fix: Ignore auto-repeat key events to prevent jitter
+    // Auto-repeat causes the key to "flicker" because it repeatedly triggers touch down/up
+    if (from->isAutoRepeat()) {
+        return;
+    }
+
     if (QEvent::KeyPress == from->type()) {
         int id = attachTouchID(from->key());
         sendTouchDownEvent(id, clickPos);
@@ -542,6 +548,11 @@ void InputConvertGame::onDragTimer() {
 
 void InputConvertGame::processKeyDrag(const QPointF &startPos, QPointF endPos, quint32 startDelay, float dragSpeed, const QKeyEvent *from)
 {
+    // Fix: Ignore auto-repeat key events to prevent jitter
+    if (from->isAutoRepeat()) {
+        return;
+    }
+    
     if (QEvent::KeyPress == from->type()) {
         // stop last
         if (m_dragDelayData.timer && m_dragDelayData.timer->isActive()) {
@@ -593,6 +604,11 @@ void InputConvertGame::processKeyDrag(const QPointF &startPos, QPointF endPos, q
 void InputConvertGame::processAndroidKey(AndroidKeycode androidKey, const QKeyEvent *from)
 {
     if (AKEYCODE_UNKNOWN == androidKey) {
+        return;
+    }
+    
+    // Fix: Ignore auto-repeat key events to prevent jitter
+    if (from->isAutoRepeat()) {
         return;
     }
 
